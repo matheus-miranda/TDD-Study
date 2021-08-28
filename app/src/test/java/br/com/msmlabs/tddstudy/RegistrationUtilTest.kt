@@ -38,7 +38,7 @@ class RegistrationUtilTest {
     @Test
     fun `password is empty returns false`() {
         val result = RegistrationUtil.validateRegistrationInput(
-            username = "Peter",
+            username = "Jack",
             password = "",
             confirmPassword = ""
         )
@@ -48,7 +48,7 @@ class RegistrationUtilTest {
     @Test
     fun `password is not the same as confirmation returns false`() {
         val result = RegistrationUtil.validateRegistrationInput(
-            username = "Peter",
+            username = "Jack",
             password = "123",
             confirmPassword = "456"
         )
@@ -58,9 +58,9 @@ class RegistrationUtilTest {
     @Test
     fun `password has less than two digits returns false`() {
         val result = RegistrationUtil.validateRegistrationInput(
-            username = "Peter",
-            password = "abcd1",
-            confirmPassword = "abcd1"
+            username = "Jack",
+            password = "abcd9",
+            confirmPassword = "abcd9"
         )
         assertThat(result).isFalse()
     }
